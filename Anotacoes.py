@@ -798,6 +798,102 @@ for numero in range (100):
     else:
         continue
 
+for numero in range (100):
+    if numero % 2 == 0:
+        print(numero)
+    else:
+        break
+
+frutas =['maça', 'manga', 'laranja', 'morango']
+for fruta in frutas
+    if fruta == 'manga'
+        continue
+    print(f'{fruta} adicionada a dieta.')    
+
+frutas =['maça', 'manga', 'laranja', 'morango']
+for fruta in frutas
+    if fruta == 'manga'
+        break
+    print(f'{fruta} adicionada a dieta.')    
+
+#Desafios:
+
+estilos = ['hip-hop', 'rock', 'rap', 'pop']
+for estilo in estilos:
+    if estilo =='rap':
+        continue
+    print(estilo)
+
+estilos = ['hip-hop', 'rock', 'rap', 'pop']
+for estilo in estilos:
+    if estilo =='rock':
+        break
+    print(estilo)
+
+
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ PROJETO 2 - CRIANDO UM MINI-GAME DE DESENHOS E ESCOLHAS C/ MODULO TURTLE │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+from turtle import Turtle
+#Inicializar uma turtle
+t = Turtle()
+#definir velocidade
+t.speed(1)
+#movimentar a turtle para frente
+t.forward(100)
+#rotacionar em X graus para a direita
+t.right(90)
+t.forward(100)
+#rotacionar em X graus para a esquerda
+t.left(90)
+t.forward(100)
+#moviemtar para tras
+t.backward(200)
+input()
+
+#DEFAFIO - MINI GAME
+
+from turtle import Turtle
+#Inicializar uma turtle
+t = Turtle()
+#definir velocidade
+t.speed(1)
+while True:
+    direcao = input('Direção? (f)rente ou (t)ras?')
+    if direcao == 'f':
+        distancia = int (
+            input('Pixels para frente:'))
+        movimentar_para_o_lado = input(
+            'Rotacionar para a (d)ireita, (e)squerda, ou (n)ão rotacionar?')
+        if movimentar_para_o_lado == 'd':
+            angulo = int(input('Quanto para a direita rotacionar?'))
+            t.right(angulo)
+        elif movimentar_para_o_lado == 'e':
+            angulo = int(input('Quanto para a esquerda rotacionar?'))
+            t.left(angulo)
+        t.forward(distancia)
+    if direcao == 't':
+        distancia = int (
+            input('Pixels para trás:'))
+        movimentar_para_o_lado = input(
+            'Rotacionar para a (d)ireita, (e)squerda, ou (n)ão rotacionar?')
+        if movimentar_para_o_lado == 'd':
+            angulo = int(input('Quanto para a direita rotacionar?'))
+            t.right(angulo)
+        elif movimentar_para_o_lado == 'e':
+            angulo = int(input('Quanto para a esquerda rotacionar?'))
+            t.left(angulo)
+        t.backward(distancia)
+    resposta = input ('Continuar andando?')
+    if resposta not in ('sim', 's'):
+        break
+
+
+
+
+
+
 
 
 
