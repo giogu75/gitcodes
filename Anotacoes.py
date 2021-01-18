@@ -792,9 +792,11 @@ for numero in range (10):
 # │ BREAK E CONTINUE │
 # └──────────────────┘
 
-#AULA 15
-#teste
-
+for numero in range (100):
+    if numero % 2 == 0:
+        print(numero)
+    else:
+        continue
 
 
 
