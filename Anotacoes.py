@@ -961,6 +961,9 @@ FUNÇÕES QUE APENAS PROCESSA DADOS
 '''
 print('ola!')
 
+def comprar_equiamentos():
+    return 'Estou comprando equipamentos'
+
 '''
 FUNÇÕES QUE RETORNAM DADOS
 '''
@@ -968,6 +971,9 @@ FUNÇÕES QUE RETORNAM DADOS
 # como escolhar entre funções que processam VS retornan dados?
 # eu vou precisar usar essa informação na lógica do meu programa ainda?
 # ou so preciso processar esse dado, mas não irei utilizar mais ele depois?
+
+
+
 
 def exibir_cotação_do_dia(moeda):
     if moeda =='usd':
@@ -1011,13 +1017,130 @@ gerar_objeto_personalizado('preta', altura = 2.10, formato = 'quadrado')
     #ja a cor preto não, pois é posicional
 
 
+# ┌───────────────────────────────────────────────┐
+# │ ARGS - FUNÇÕES COM Nº DE ARGUMENTOS DINÂMICOS │
+# └───────────────────────────────────────────────┘
+
+def somar (*valores, b):  # *args
+    #nÃO SE SABE EXATAMENTE QUANTOS VALORES VÃO SER RECEBIDOS
+    #O QUE NÃO RECEBER O ASTERISCO, DEPOIS DEVE SER NOMEADO
+    print (valores) #é um tipo de tupla
+    for valor in valores:
+        b += valor
+    print(b)
+
+somar(10, 20, 5, b=5)
 
 
+# ┌────────────────────────────────────────────────────────────────────────┐
+# │ KWARGS - FUNÇÕES COM Nº DE ARGUMENTOS NOMEADOS (POSICIONAIS) DINÂMICOS │
+# └────────────────────────────────────────────────────────────────────────┘
+
+def concatenar (**palavras): # **kwargs (Keyword arguments)
+    frase = ''
+    for palavra in palavras.values():
+        frase += palavra + ' '  #ENTRE ' ' COM UM ESPAÇO PARA ESPAÇAR AS PALAVRAS
+        print (frase)           #OBSERVE O RESULTADO DA INDENTAÇÃO DESSES PRINT
+    print (frase)    
+
+concatenar(a='Nós', b='somos', c='Pythonistas', d='profissionais.')
+
+def fazer_calculo(nome,  *args, **kwargs):
+    print(nome) #tipo de lista
+    print(args) #tipo de tupla
+    print(kwargs) #tipo de dicionario
+    for arg in args:
+        print(arg)
+    for kwarg in kwargs.keys(): #retora as chaves 'keys': a,b,c
+        print(kwarg)
+    for vwarg in kwargs.values(): #retorna os valores 'values': 1,2,3
+        print(vwarg)
+
+fazer_calculo('Giovani', 4, 5, 6, 7, a = 1, b = 2, c = 3)
+# nome: Giovani --> argumento posicional
+# *args: 4,5,6,7 --> argumentos posicionais
+# **kwargs: a = 1, b = 2, c = 3 --> argumentos nomeados: deve ser nomeado, fica tipo dicionario
 
 
+# ┌─────────────────────────────────────────────────────────────┐
+# │ DECORATORS - APROVEITANDO E ESTENDENDO O QUE JA ESTÁ PRONTO │
+# └─────────────────────────────────────────────────────────────┘
+
+#executar uma função dentro de outra função
+
+from datetime import datetime
+
+def depositar_dinheiro():
+    print('Depositando dinheiro')
+    def depositando_dolar():
+        print('Depositando Dolar')
+    def depositando_reais():
+        print ('Depositando Reais')
+    depositando_dolar()
+    depositando_reais()
+depositar_dinheiro()
 
 
+#executar uma referencia de funções
+
+def pai(numero):
+    def filho_1():
+        print('Sou o filho 1')
+    def filho_2():
+        print('Sou o filho 2')
+    if numero == 1:
+        return filho_1 # sem os '()', apenas retorna a referencia para ser usada em 
+                        # outro momento
     
+resultado = pai(1) # a referencia 'filho 1' foi passada para resultado
+resultado()
+
+#DECORATORS:
+
+def meu_decorator(funcao): #funçao que roda outra função
+    def wrapper(): #wrapper é apenas um nome que escolhi, poderia ser outro nome
+        print('Antes')
+        funcao()
+        print('Depois')
+    return wrapper
+
+@meu_decorator
+def parabenizar():
+    print('Parabéns !!!')
+
+parabenizar()
+
+
+#DESAFIO: 
+# CRIE UM DECORATOR QUE IRA PEGAR A FUNÇÃO QUE FOR PASSADA PARA ELE E IMPRIMIR
+# O HORÁRIO ATUAL ANTES DE EXECUTAR A FUNÇÃO E DEPOIS IMPRIMIR O HORÁRIO
+
+from datetime import datetime
+
+def monitorar_horário(funcao):
+    def monitor():
+        print(f'Começou em {datetime.now()}')
+        funcao()
+        print(f'Terminou em {datetime.now()}')
+    return monitor
+
+@monitorar_horário
+def baixar_musicas():
+    print('Baixando Musicas ... ')
+    print('Baixando Musicas ... ')
+    print('Baixando Musicas ... ')
+    print('Baixando Musicas ... ')
+    print('Baixando Musicas ... ')
+baixar_musicas()
+
+
+print('──────────────────────────────────────────────────────────────────────')
+
+
+
+
+
+
 
 
 
@@ -1071,7 +1194,6 @@ print('────────────────────────�
 # 5 - FUNÇÕES
 
 #LIMPAR O CONSOLE
-# import os 
-# os.system('cls') or None 
+
 
 #pip install autopep8
