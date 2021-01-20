@@ -984,7 +984,40 @@ else:
     print('cotação não favorável')
     
 
+# ┌────────────────────────────────────┐
+# │ ARGUMENTOS POSICIONAIS VS NOMEADOS │
+# └────────────────────────────────────┘
 
+def exibir_preco(nome_produto, preco):
+    print(f'{nome_produto}, esta no valor de :{preco}')
+
+exibir_preco('iphone', 5000) # arg posicional
+exibir_preco(nome_produto = 'iphone', preco = 5000) # arg. nomeados
+
+# produto = input('qual produto: ')
+# valor = int(input('preço: '))
+# exibir_preco(nome_produto = produto, preco = valor)
+
+'''
+Desafio
+'''
+def gerar_objeto_personalizado(cor, *,altura, formato):
+    #cor = argumento posicional; 
+    # altura e formato, após o '*' = argumento nomeado
+    print(f'O objeto é da cor {cor}, mede {altura}m de altura, e tem o formato de um {formato}.')
+
+gerar_objeto_personalizado('preta', altura = 2.10, formato = 'quadrado')
+    #os argumentos altura e formato precisam ser nomeados!!,
+    #ja a cor preto não, pois é posicional
+
+
+
+
+
+
+
+
+    
 
 
 
