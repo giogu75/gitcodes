@@ -951,6 +951,38 @@ calcular_valores(10, 4)
 
 
 
+# ┌────────────────────────────────┐
+# │ RETURN - PROCESSAR VS RETORNAR │
+# └────────────────────────────────┘
+
+'''
+PROCESSAR VS RETORNAR
+FUNÇÕES QUE APENAS PROCESSA DADOS
+'''
+print('ola!')
+
+'''
+FUNÇÕES QUE RETORNAM DADOS
+'''
+#cidade = input('qual a sua cidade? ')
+# como escolhar entre funções que processam VS retornan dados?
+# eu vou precisar usar essa informação na lógica do meu programa ainda?
+# ou so preciso processar esse dado, mas não irei utilizar mais ele depois?
+
+def exibir_cotação_do_dia(moeda):
+    if moeda =='usd':
+        print(5.47)
+exibir_cotação_do_dia('usd')
+
+def obter_cotação_do_dia(moeda):
+    if moeda == 'usd':
+        return 5.47
+cotacao = obter_cotação_do_dia('usd')
+if cotacao > 5:
+    print('investir em ações americanas')
+else:
+    print('cotação não favorável')
+    
 
 
 
