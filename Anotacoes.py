@@ -892,6 +892,64 @@ while True:
 
 
 
+# ┌───────────┐
+# │ MODULO 04 │
+# └───────────┘
+
+# ┌─────────────────────────────┐
+# │ FUNÇÕES -AGORA VOCÊ ENTENDE │
+# └─────────────────────────────┘
+
+# funções:
+# input()
+# len()
+# split()
+
+# o que elas tem em comum?
+'''
+def nome(parametro):
+    comandos
+'''
+
+def dar_boas_vindas():
+    print('bem vindo!')
+
+dar_boas_vindas()
+
+
+def dar_boas_vindas_personalizadas(nome):
+    print(f'bem vindo {nome}')
+
+dar_boas_vindas_personalizadas('Giovani')
+
+# valor padrão
+
+def apresentar_lugar(lugar='nossa loja'):
+    print(f'Conheça {lugar}')
+
+apresentar_lugar()
+
+
+def apresentar_lugar(lugar='nossa loja'):
+    print(f'Conheça {lugar}')
+
+apresentar_lugar('Disney')
+
+
+def apresentar_lugar(horario_de_funcionamento, lugar='nossa loja'):
+    print(
+        f'Conheça {lugar}, horário de funcionamento das {horario_de_funcionamento}')
+
+apresentar_lugar('8h as 18h', 'Disney')
+
+# desafio
+
+def calcular_valores(preco, quantidade=1):
+    print(preco*quantidade)
+
+calcular_valores(10, 4)
+
+
 
 
 
@@ -950,3 +1008,5 @@ print('────────────────────────�
 #LIMPAR O CONSOLE
 # import os 
 # os.system('cls') or None 
+
+#pip install autopep8
