@@ -1139,6 +1139,9 @@ baixar_musicas()
 # │ CLEAN CODE NA PRÁTICA │
 # └───────────────────────┘
 
+# A aula de Turtle foi modificada, substituindo-se expressões
+# soltas por funções, diminuindo o tamanho do código
+
 from turtle import Turtle
 #Inicializar uma turtle
 t = Turtle()
