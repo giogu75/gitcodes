@@ -14,6 +14,5 @@ cursor = banco.cursor()
 #  #cria a tabela - rodar uma vez e depois comentar essa linha
 cursor.execute("INSERT INTO pessoas VALUES('"+nome+"','"+str(idade)+"', '"+email+"')")
 
-
 banco.commit()
 
