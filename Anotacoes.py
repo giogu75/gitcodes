@@ -396,18 +396,18 @@ print('Programa Finalizado')
 # from datetime import datetime
 # import random
 
-# print ('-------------------BEM VINDO A NOSSA EMPRESA----------------------')
-# nome = input('Digite seu nome: ')
-# idade = int(input('Digite sua idade: '))
-# data_cadastro = datetime.now()
-# cartoes = ['R$ 50,00', 'R$ 250,00', 'R$ 120,00']
-# cartao = random.choice(cartoes)
-# aniversario = datetime.strptime(input(
-#     'Digite sua data de aniversario no formato dd/mm/aaaa: '), '%d/%m/%Y')
+print ('-------------------BEM VINDO A NOSSA EMPRESA----------------------')
+nome = input('Digite seu nome: ')
+idade = int(input('Digite sua idade: '))
+data_cadastro = datetime.now()
+cartoes = ['R$ 50,00', 'R$ 250,00', 'R$ 120,00']
+cartao = random.choice(cartoes)
+aniversario = datetime.strptime(input(
+    'Digite sua data de aniversario no formato dd/mm/aaaa: '), '%d/%m/%Y')
 
-# # modulo 2
-# print(f'Olá {nome}, seu registro foi concluido com sucesso no dia {data_cadastro.day}/{data_cadastro.month}/{data_cadastro.year}.')
-# print(f'\n$$$$$ Parabens $$$$$\n\nHouve um sorteio e voce ganhou um cartão de compra no valor de {cartao}.')
+# modulo 2
+print(f'Olá {nome}, seu registro foi concluido com sucesso no dia {data_cadastro.day}/{data_cadastro.month}/{data_cadastro.year}.')
+print(f'\n$$$$$ Parabens $$$$$\n\nHouve um sorteio e voce ganhou um cartão de compra no valor de {cartao}.')
 
 
 # ┌───────────┐
@@ -612,27 +612,27 @@ elif numero_atrasos == 2:
 elif numero_atrasos == 1:
     print('Essa é sua primeira falta')
 
-# print('──────────────────────────────────────────────────────────────────────')
-# velocidade = int(input('qual a velocidade? '))
-# if velocidade <= 50:
-#     print('Não foi multado')
-# elif velocidade >=51 and velocidade <=60:
-#     print('Levou multa de 2 pontos')
-# elif velocidade >=61 and velocidade <= 75:
-#     print('Levou multa de 3 pontos')
-# else:
-#     print('Levou multa de 7 pontos')
+print('──────────────────────────────────────────────────────────────────────')
+velocidade = int(input('qual a velocidade? '))
+if velocidade <= 50:
+    print('Não foi multado')
+elif velocidade >=51 and velocidade <=60:
+    print('Levou multa de 2 pontos')
+elif velocidade >=61 and velocidade <= 75:
+    print('Levou multa de 3 pontos')
+else:
+    print('Levou multa de 7 pontos')
 
-# # Metodo Chaining:
-# velocidade = int(input('qual a velocidade? '))
-# if velocidade <= 50:
-#     print('Não foi multado')
-# elif 51 <=  velocidade <=60:
-#     print('Levou multa de 2 pontos')
-# elif 61 <= velocidade <= 75:
-#     print('Levou multa de 3 pontos')
-# else:
-#     print('Levou multa de 7 pontos')
+# Metodo Chaining:
+velocidade = int(input('qual a velocidade? '))
+if velocidade <= 50:
+    print('Não foi multado')
+elif 51 <=  velocidade <=60:
+    print('Levou multa de 2 pontos')
+elif 61 <= velocidade <= 75:
+    print('Levou multa de 3 pontos')
+else:
+    print('Levou multa de 7 pontos')
 #
 print('──────────────────────────────────────────────────────────────────────')
 
@@ -1022,7 +1022,7 @@ gerar_objeto_personalizado('preta', altura = 2.10, formato = 'quadrado')
 # └───────────────────────────────────────────────┘
 
 def somar (*valores, b):  # *args
-    #nÃO SE SABE EXATAMENTE QUANTOS VALORES VÃO SER RECEBIDOS
+    #NÃO SE SABE EXATAMENTE QUANTOS VALORES VÃO SER RECEBIDOS
     #O QUE NÃO RECEBER O ASTERISCO, DEPOIS DEVE SER NOMEADO
     print (valores) #é um tipo de tupla
     for valor in valores:
