@@ -241,7 +241,7 @@ print('────────────────────────�
 # │ INPUT: RECEBENDO DADOS DO USUÁRIO │
 # └───────────────────────────────────┘
 
-""" senha = input("Digite sua senha: ")
+senha = input("Digite sua senha: ")
 print(senha)
 print(type(senha))
 print(
@@ -249,7 +249,7 @@ print(
 quantidade_de_filmes = int(
     input('Quantos filmes vc assistiu? '))
 print(type(quantidade_de_filmes))
- """
+
 
 # ┌────────────────────────────────┐
 # │ NÚMEROS E OPERAÇÕES MATEMÁTICA │
@@ -316,7 +316,7 @@ print(lancamento_app)
 print('──────────────────────────────────────────────────────────────────────')
 
 ''' Quero receber a data de lançamento do meu aplicativo '''
-''' 25/08/2020 
+''' 25/08/2020 '''
 data_de_lancamento = datetime.strptime(input(
     'Quando devemos lançar o aplicativo? '), '%d/%m/%Y')
         # %Y = 2021; %y = 21 (abreviado)
@@ -337,7 +337,7 @@ dia_aniversário = datetime.strptime(input(
 dia_atual = datetime.now()
 dia2 = (dia_aniversário) - (dia_atual)
 print (f'Faltam {dia2.days} dias para o seu aniversário.')
-'''
+
 
 
 # ┌───────────────────────────────┐
