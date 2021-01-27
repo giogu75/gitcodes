@@ -5,13 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GUALDI'S PAGE</title>
+    <!-- CSS INTERNO 
+    <style>
+        p {
+            color: rgb(3, 253, 78);
+        }
+    </style>
+-->
+    <link rel="stylesheet" href="CSS/style.css">
+
 </head>
 
 <body>
+    <a href="#ferrari_amarela">link para a imagem ferrari_amarela</a>
     <Hr>
-    </Hr>
     <!--paragrafos-->
-    <h1 align="center"><ins><i>Títulos</i></ins></h1>
+    <h1 align="center" id="titulo"><ins><i>Títulos</i></ins></h1>
     <h1>Olá Mundo - h1</h1>
     <h2>Olá Mundo - h2</h2>
     <h3>Olá Mundo - h3</h3>
@@ -21,7 +30,7 @@
     <hr>
 
     <!--paragrafos-->
-    <p align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    <p align="justify" style="color:blue">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         Lorem Ipsum has been the industry's standard dummy text ever since the
         1500s, when an unknown printer took a galley of type and scrambled it to
         make a type specimen book. It has survived not only five centuries, but
@@ -44,6 +53,17 @@
             publishing software like Aldus PageMaker including versions of Lorem
             Ipsum.</font>
     </p>
+    <p id="principal"> Lorem Ipsum
+        is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the
+        1500s, when an unknown printer took a galley of type and scrambled it to
+        make a type specimen book. It has survived not only five centuries, but
+        also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets
+        containing Lorem Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem
+        Ipsum.</font>
+    </p>
     <hr>
 
     <font color="red" size="15px"><b>
@@ -59,11 +79,11 @@
 
     <!--modelos de formatação de parágrafos-->
     <h3 align="center"><ins><i>Modelos de formatação do texto:</i></ins></h3>
-    <p>Esse é um <b>texto em negrito</b></p>
-    <p>Esse é um <strong>texto em negrito</strong></p>
-    <p>Esse é um <i>texto em itálico</i></p>
+    <p class="texto_verde">Esse é um <b>texto em negrito</b></p>
+    <p class="texto_verde">Esse é um <strong>texto em negrito</strong></p>
+    <p class="texto_verde">Esse é um <i>texto em itálico</i></p>
     <p>Esse é um <em>texto em itálico</em></p>
-    <p>Esse é um <mark>texto com marcação</mark></p>
+    <p class="texto_verde">Esse é um <mark>texto com marcação</mark></p>
     <p>Esse é um <small>texto com tag small</small></p>
     <p>Esse é um <del>texto que foi removido</del> e substituído por este</p>
     <p>Esse é um <ins>texto que foi inserido/sublinhado</ins></p>
@@ -78,7 +98,7 @@
 
     <!--anexa imagem à pagina e transforma em um link externo-->
     <a href="https://revistacarro.com.br/ferrari-apresenta-dois-novos-conversiveis/">
-        <img src="./images/ferrari.jpg" alt="ferrari_amarela" width="300">
+        <img id="ferrari_amarela" src="./images/ferrari.jpg" alt="ferrari_amarela" width="300">
     </a><br>
     <p>Exemplo de listas sem numeração:</p>
     <ul>

@@ -1,0 +1,26 @@
+/* P{
+    color:rgb(6, 114, 6);
+}*/
+
+body{
+    background-image: url(../fundos/fundo5.png);
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-repeat: repeat-y; */
+    /* background-repeat: repeat-x; */
+    /* background-color: rgb(124, 187, 173) */
+}
+
+#principal{
+    
+    color:blueviolet;
+    background-color: rgb(0, 255, 200);
+}
+
+#titulo{
+    color:#30bd05
+}
+
+.texto_verde{
+    color:rgb(19, 153, 37)
+}
